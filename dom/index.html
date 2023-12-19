@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dom </title>
+</head>
+
+<body>
+   <ul id="stulist">
+      <li>
+         Student Name
+      </li>
+   </ul>
+   <input type="text" name="name" id="name" placeholder="name">
+   <input type="text" name="age" id="age" placeholder="age">
+   <input type="email" name="email" id="email" placeholder="email">
+
+   <input type="button" onclick="submit()" value="submit">
+   <input type="button" onclick="namehi()" value="highlight name">
+   <input type="button" onclick="emailhi()" value="highlight email">
+   <input type="button" onclick="agehi()" value="highlight age">
+   <script>
+
+      function submit() {
+         console.log("submit");
+         const ullist = document.getElementById("stulist");
+         let lilist = document.createElement("li");
+         n = document.getElementById("name").value
+         email = document.getElementById("email").value
+         age = document.getElementById("age").value
+         divname = document.createElement("div");
+         divemail = document.createElement("div");
+         divage = document.createElement("div");
+         divname.setAttribute("class", "namehi");
+         divemail.setAttribute("class", "emailhi");
+         divage.setAttribute("class", "agehi");
+         divname.textContent = n;
+         divemail.textContent = email;
+         divage.textContent = age;
+         lilist.appendChild(divname);
+         lilist.appendChild(divemail);
+         lilist.appendChild(divage);
+
+         //lilist.innerHTML = "<div class='namehi'>" + n + "</div> " + "<div class='emailhi'>" + email + "</div> " + "<div class='agehi'>" + age + "</div> ";
+         // lilist.textContent = n + "  " + email + "  " + age;
+
+         let removebtn = document.createElement("button");
+         removebtn.textContent = "remove";
+         removebtn.onclick = function () {
+            ullist.removeChild(lilist);
+         }
+         lilist.appendChild(removebtn);
+
+         ullist.appendChild(lilist);
+
+      }
+
+      function namehi() {
+         const namehiele = document.getElementsByClassName("namehi");
+         for (n of namehiele) {
+            n.style.color = "red"
+         }
+      }
+
+      function emailhi() {
+         const emailhiele = document.getElementsByClassName("emailhi");
+         for (n of emailhiele) {
+            n.style.color = "blue"
+         }
+      }
+
+      function agehi() {
+         const agehiele = document.getElementsByClassName("agehi");
+         for (n of agehiele) {
+            n.style.color = "orange"
+         }
+      }
+   </script>
+</body>
+
+</html>
