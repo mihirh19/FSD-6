@@ -19,17 +19,20 @@ async function search() {
    // }
 
    // xhr.send(); 
+   ou.innerText = "Loading..."
 
-   await fetch("https://api.api-ninjas.com/v1/weather?city=" + inp.value, {
+   await fetch(`https://api.api-ninjas.com/v1/weather?city=${inp.value}`, {
       method: "GET",
       headers: {
          "X-Api-Key": "U7UqiXUupn4BmFN7sykIiw==vx7VfSZBWKVTjclj",
       }
    }).then(response => response.json()).then(data => {
-      console.log(data["temp"])
+
+      if (data["temp"] == undefined) {
+         throw "City not found"
+      }
       ou.innerText = "Temp  : " + data["temp"] + "°C" + "\n" + "Humidity  : " + data["humidity"] + "%" + "\n" + "Wind Speed  : " + data["wind_speed"] + "km/h"
    }).catch(err => {
-      console.log(err)
       ou.innerText = "City not found"
    })
 
