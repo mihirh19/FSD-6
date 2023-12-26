@@ -1,0 +1,6 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="Hybernate" transaction-type="RESOURCE_LOCAL">
+        <description>Persistence unit demo</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    </persistence-unit>
+</persistence>
