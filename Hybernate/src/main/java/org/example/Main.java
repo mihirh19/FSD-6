@@ -29,11 +29,11 @@ public class Main {
             List<Student> students = studentDAO.getAllStudents();
             System.out.println("students" + students.toString());
 
-            Student studentToUpdate = studentDAO.getStudentById(1);
-            System.out.println("Updating student " + studentToUpdate);
-            if (studentToUpdate != null) {
-                studentToUpdate.setStudentName("Mihir Hdavani");
-                studentDAO.updateStudent(studentToUpdate);
+            Student studentUpdate = studentDAO.getStudentById(1);
+            System.out.println("Updating student " + studentUpdate);
+            if (studentUpdate != null) {
+                studentUpdate.setStudentName("Mihir Hdavani");
+                studentDAO.updateStudent(studentUpdate);
             }
 
             Student updatedStudent = studentDAO.getStudentById(1);
