@@ -35,7 +35,14 @@ code {
 }
 
 
-.student-sem {
+.student-sem-6 {
   font-size: 43px;
   margin: 0px;
+  color: blue;
+}
+
+.student-sem-8 {
+  font-size: 43px;
+  margin: 0px;
+  color: red;
 }

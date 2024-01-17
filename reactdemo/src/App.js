@@ -10,7 +10,7 @@ function App() {
       <Header />
       <div className='studentcomp'>
         {stu.map((s) => {
-          return <Student {...s} />
+          return <Student key={s.id} {...s} />
         })}
       </div>
       <h1>React App</h1>
