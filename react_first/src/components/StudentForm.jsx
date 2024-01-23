@@ -39,7 +39,7 @@ const StudentForm = () => {
    }
 
 
-   const handleSelectChnage = (e) => {
+   const handleSelectChange = (e) => {
       const selectedOptions = Array.from(e.target.selectedOptions, option => option.value)
       setStudentInfo({ ...studentInfo, selectsports: selectedOptions })
    }
@@ -85,7 +85,7 @@ const StudentForm = () => {
                <div style={{ display: "flex", flexDirection: "row" }}>
                   <h2 style={{ marginRight: "15px" }}>Sports </h2>
 
-                  <select name="selectsports" id="selectsports" onChange={handleSelectChnage} multiple>
+                  <select name="selectsports" id="selectsports" onChange={handleSelectChange} multiple>
                      {sports.map((sport) => {
                         return <option key={sport.id} value={sport.name}>{sport.name}</option>
                      })}
