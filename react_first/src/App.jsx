@@ -1,5 +1,5 @@
 
-import './App.css'
+import './App.scss'
 // import Header from './components/Header'
 // import Student from './components/Student'
 import StudentForm from './components/StudentForm'
