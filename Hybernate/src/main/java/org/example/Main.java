@@ -15,6 +15,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Configuration config  = new Configuration();
+        config.configure();
         config.addAnnotatedClass(Student.class);
 
         SessionFactory sessionFactory = config.buildSessionFactory();

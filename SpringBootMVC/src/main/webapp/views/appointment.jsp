@@ -1,18 +1,46 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-         pageEncoding="US-ASCII"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-    <title>appointment JSP</title>
+    <title>employee Registration</title>
 </head>
 <body>
-    <form method="post" action="addappointment" >
+<h1>employee appointment registration</h1>
 
-        <p>
-            Name  : <input type="text" name="patientName">
-        </p>
+<form:form method="post" action="addappointment" modelAttribute="employee">
 
-        <input type="submit" value="Add">
-    </form>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <form:input path="employeeName" type="text"/>
+            </td>
+        </tr>
+        <tr><form:errors path="employeeName" style="color:red"/></tr>
+
+        <tr>
+            <td>Contact No:</td>
+            <td>
+                <form:input path="employeeContact" type="text"/>
+            </td>
+        </tr>
+        <tr> <form:errors path="employeeContact" style="color:red"/></tr>
+
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <form:radiobutton path="employeeGender" value="Male" label="Male"/>
+                <form:radiobutton path="employeeGender" value="Female" label="Female"/>
+            </td>
+        </tr>
+        <tr><form:errors path="employeeGender" style="color:red"/></tr>
+
+        <tr>
+            <td colspan="2"><input type="submit" value="add my appointment!"/></td>
+        </tr>
+
+    </table>
+
+</form:form>
 </body>
 </html>

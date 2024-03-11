@@ -1,0 +1,31 @@
+[
+   {
+      "id" : 1,
+      "name" : "mihir",
+      "sem" : 8,
+      "email" : "mihir@gmail.com",
+      "city" : "nadiad"
+   },
+   
+   {
+      "id" : 2,
+      "name" : "rushi",
+      "sem" : 6,
+      "email" : "mihir@gmail.com",
+      "city" : "nadiad"
+   },
+   {
+      "id" : 3,
+      "name" : "nijal",
+      "sem" : 8,
+      "email" : "mihir@gmail.com",
+      "city" : "nadiad"
+   },
+   {
+      "id" : 4,
+      "name" : "gor",
+      "sem" : 6,
+      "email" : "mihir@gmail.com",
+      "city" : "nadiad"
+   }
+]
