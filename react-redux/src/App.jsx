@@ -2,7 +2,7 @@
 import './App.css'
 import { Provider } from "react-redux"
 import store from './store/store'
-import Login from './components/Login'
+import Lists from './components/Lists'
 function App() {
 
   return (
@@ -10,7 +10,7 @@ function App() {
       <Provider store={store}>
         <div>
           <h1>React-redux</h1>
-          <Login />
+          <Lists />
         </div>
       </Provider>
     </>
